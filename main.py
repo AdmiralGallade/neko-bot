@@ -1,7 +1,7 @@
 import os
 from random import randrange
 import discord
-import nekos
+import nekos #nekos.py
 from dotenv import load_dotenv
 
 
