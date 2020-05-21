@@ -18,8 +18,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
@@ -53,4 +51,9 @@ async def on_message(message):
     if message.content == '!neko':
         response = nekos.img("neko")
         await message.channel.send(response)
+    
+    if message.content=='!nekos':
+        for i in range(5):
+            response=nekos.img("neko")
+            await message.channel.send(response)
 client.run(TOKEN)
